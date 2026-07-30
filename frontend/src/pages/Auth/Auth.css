@@ -1,0 +1,476 @@
+/* ===========================
+   AUTH PAGE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    background:
+        radial-gradient(circle at top left,#ffffff 0%,#FAF7FF 30%,#F5F0FF 70%,#FCFBFF 100%);
+    overflow:hidden;
+    position:relative;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.auth-left{
+    flex:1;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:70px;
+    background:transparent;
+}
+
+.auth-left::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border-radius:50%;
+    border:1.5px solid rgba(108,77,255,.12);
+    bottom:-520px;
+    left:-260px;
+}
+
+.auth-left::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    border:1.5px solid rgba(108,77,255,.10);
+    bottom:-350px;
+    right:-180px;
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.left-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:560px;
+    transform:translateY(-15px);
+}
+
+.auth-logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:40px;
+}
+
+.auth-logo h2{
+    font-size:30px;
+    font-weight:700;
+    color:#1F2937;
+    letter-spacing:.5px;
+}
+
+.auth-logo img{
+    width:52px;
+}
+
+
+.left-content h1{
+    font-size:58px;
+    line-height:1.08;
+    font-weight:700;
+    color:#171B2D;
+    margin-bottom:26px;
+    letter-spacing:-1px;
+}
+
+.left-content h1 span{
+    background:linear-gradient(90deg,#6C4DFF,#A04CFF);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.left-content p{
+    font-size:21px;
+    line-height:1.7;
+    color:#636C82;
+    max-width:480px;
+    margin-bottom:45px;
+}
+
+/* ===========================
+   ROBOT
+=========================== */
+
+.illustration{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:-50px;
+}
+
+.illustration::before{
+    content:"";
+    position:absolute;
+    width:330px;
+    height:330px;
+    background:rgba(108,77,255,.18);
+    border-radius:50%;
+    filter:blur(70px);
+    left:50%;
+    top:55%;
+    transform:translate(-50%,-50%);
+}
+
+.illustration img{
+    position:relative;
+    width:430px;
+    max-width:100%;
+    z-index:2;
+    filter:drop-shadow(0 30px 60px rgba(108,77,255,.18));
+    animation:floatRobot 6s ease-in-out infinite;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.auth-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    background:transparent;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.auth-card{
+    width:100%;
+    max-width:560px;
+
+    background:#fff;
+    border-radius:28px;
+
+    padding:52px 40px 30px;
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+        0 25px 70px rgba(108,77,255,.12);
+
+    border:1px solid rgba(108,77,255,.08);
+}
+.floating-logo{
+    position:absolute;
+    top:-38px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.logo-circle{
+    width:78px;
+    height:78px;
+    background:#FFFFFF;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid rgba(108,77,255,.08);
+
+    box-shadow:
+        0 12px 30px rgba(108,77,255,.12);
+}
+
+.logo-circle img{
+    width:52px;
+}
+
+.logo-circle img{
+    width:42px;
+}
+
+
+.auth-card h2{
+    text-align:center;
+    font-size:34px;
+    color:#1F2937;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.auth-subtitle{
+    text-align:center;
+    color:#6B7280;
+    font-size:15px;
+    margin-bottom:28px;
+    line-height:1.6;
+}
+
+.register-form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#374151;
+}
+
+.form-group input{
+    height:48px;
+    border:1px solid #E5E7EB;
+    border-radius:12px;
+    padding:0 16px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group input:focus{
+    border-color:#6C4DFF;
+    box-shadow:0 0 0 4px rgba(108,77,255,.12);
+}
+
+.terms{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    color:#6B7280;
+}
+
+.terms span{
+    color:#6C4DFF;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.primary-btn{
+    margin-top:10px;
+    height:48px;
+    border:none;
+    border-radius:14px;
+    background:#6C4DFF;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    background:#5A3DFF;
+    transform:translateY(-2px);
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:18px 0;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#E5E7EB;
+}
+
+.divider span{
+    color:#9CA3AF;
+    font-size:14px;
+}
+.social-buttons{
+    display:flex;
+    gap:14px;
+}
+
+.social-btn{
+    flex:1;
+    height:52px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    border:1px solid #E5E7EB;
+    border-radius:12px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.social-btn:hover{
+    border-color:#6C4DFF;
+    background:#F8F7FF;
+}
+
+.social-icon{
+    font-size:22px;
+}
+
+.switch-auth{
+    margin-top:28px;
+    text-align:center;
+    font-size:14px;
+    color:#6B7280;
+}
+
+.switch-auth a{
+    color:#6C4DFF;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.switch-auth a:hover{
+    color:#5A3DFF;
+    text-decoration:underline;
+}
+
+/* ===========================
+   FLOAT ANIMATION
+=========================== */
+
+@keyframes floatRobot{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-14px);
+    }
+}
+
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.forgot-password{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:-2px;
+    margin-bottom:8px;
+}
+
+.forgot-password a{
+    color:#6C4DFF;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.forgot-password a:hover{
+    color:#5A3DFF;
+    text-decoration:underline;
+}
+
+/* ===========================
+   PASSWORD TOGGLE
+=========================== */
+
+.password-field{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.password-field input{
+    width:100%;
+    padding-right:50px;
+}
+
+.password-toggle{
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:none;
+    border:none;
+    cursor:pointer;
+
+    color:#9CA3AF;
+    font-size:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+}
+
+.password-toggle:hover{
+    color:#6C4DFF;
+}
+
+/* ===========================
+   PASSWORD STRENGTH
+=========================== */
+
+.password-strength{
+    margin-top:10px;
+}
+
+.strength-bar{
+    width:100%;
+    height:6px;
+    background:#E5E7EB;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.strength-fill{
+    height:100%;
+    border-radius:10px;
+    transition:.35s ease;
+}
+
+.password-strength span{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.primary-btn:disabled{
+    opacity:.75;
+    cursor:not-allowed;
+    transform:none;
+}

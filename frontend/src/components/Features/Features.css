@@ -219,3 +219,77 @@
     background-position: 200% 0, 0 0;
   }
 }
+
+/* ===========================
+   TABLET RESPONSIVE
+=========================== */
+
+@media (max-width:1024px){
+
+    .features-title,
+    .how-title{
+        font-size:40px;
+    }
+
+    .features-description,
+    .how-description{
+        font-size:17px;
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:22px;
+    }
+
+    .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:40px;
+    }
+
+    .step-line{
+        display:none;
+    }
+
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .features-section,
+    .how-section{
+        padding:70px 0;
+    }
+
+    .features-title,
+    .how-title{
+        font-size:34px;
+    }
+
+    .features-description,
+    .how-description{
+        font-size:16px;
+        padding:0 10px;
+    }
+
+    .features-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .steps-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .feature-card{
+        padding:28px 20px;
+    }
+
+    .step-line{
+        display:none;
+    }
+
+}

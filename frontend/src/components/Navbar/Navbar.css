@@ -99,3 +99,32 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(108,77,255,.25);
 }
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:28px;
+    color:#6C4DFF;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-buttons{
+        display:none;
+    }
+
+    .navbar{
+        justify-content:space-between;
+    }
+
+}
