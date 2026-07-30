@@ -3,10 +3,12 @@ import "./Hero.css";
 function Hero() {
   return (
     <section className="hero">
-
       <div className="hero-left">
-
-        <h1>Learn. Prepare. Get Hired.</h1>
+        <h1>
+          Learn. Prepare.
+          <br />
+          Get Hired.
+        </h1>
 
         <p className="subtitle">
           Your Voice-Enabled Study & Career Companion
@@ -19,16 +21,21 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button>Get Started</button>
-          <button>Watch Demo</button>
+          <button className="primary-btn">
+            Get Started
+            <span className="arrow">→</span>
+          </button>
+
+          <button className="secondary-btn">
+            <span className="play-icon">▶</span>
+            <span>Watch Demo</span>
+          </button>
         </div>
-
       </div>
 
-      <div className="hero-right">
+    <div className="hero-right">
 
-      </div>
-
+  </div> 
     </section>
   );
 }

@@ -1,21 +1,101 @@
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px 80px;
+  padding: 16px 80px;
+  background: #ffffff;
 }
 
-nav ul {
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6C4DFF;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 32px;
 }
 
-nav ul li {
+.nav-links li {
+  position: relative;
   cursor: pointer;
+
+  color: #4B5563;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
 }
 
-nav h2 {
+.nav-links li:hover {
   color: #6C4DFF;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #6C4DFF;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.login-btn {
+  padding: 10px 24px;
+  background: #ffffff;
+  color: #6C4DFF;
+  border: 2px solid #6C4DFF;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #6C4DFF;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(108, 77, 255, 0.25);
+}
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.get-started-btn {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #7C5CFF 0%, #6C4DFF 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(108,77,255,.25);
 }

@@ -1,0 +1,221 @@
+.features-container {
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+.features-badge,
+.how-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #F3F0FF;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: transparent;
+
+  background-image:
+    linear-gradient(
+      120deg,
+      #6C4DFF 0%,
+      #6C4DFF 40%,
+      #FFFFFF 50%,
+      #6C4DFF 60%,
+      #6C4DFF 100%
+    ),
+    linear-gradient(#F3F0FF, #F3F0FF);
+
+  background-size: 220% 100%, 100% 100%;
+  background-position: -200% 0, 0 0;
+
+  background-clip: text, border-box;
+  -webkit-background-clip: text, border-box;
+  -webkit-text-fill-color: transparent;
+
+  animation: badgeShimmer 8s ease-in-out infinite;
+}
+
+.features-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.features-header{
+    text-align:center;
+}
+
+.features-description{
+    font-size:18px;
+    color:#6B7280;
+    max-width:650px;
+    margin:0 auto;
+}
+
+.features-section {
+  padding: 90px 0;
+  background: #F8F7FF;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 32px 22px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(17, 24, 39, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+      0 18px 45px rgba(108,77,255,.18);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon svg{
+    width:38px;
+    height:38px;
+    stroke-width:2;
+}
+
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6B7280;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 20px 0 14px;
+}
+
+.how-section {
+  padding: 100px 0;
+  background: #F8F7FF;
+}
+
+.how-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.how-header {
+  text-align: center;
+}
+
+
+.how-title {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.how-description {
+  margin-top: 18px;
+  color: #6B7280;
+  font-size: 18px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.step-card {
+  text-align: center;
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke-width: 2;
+}
+
+.step-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 15px;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.8;
+}
+
+.step-wrapper {
+  position: relative;
+}
+.step-line {
+  position: absolute;
+  top: 35px;
+  left: calc(30% + 90px);
+  width: calc(100% - 60px);
+  height: 3px;
+  background: #E4E4F7;
+  z-index: 1;
+}
+
+.step-wrapper:last-child .step-line {
+  display: none;
+}
+
+@keyframes badgeShimmer {
+  0% {
+    background-position: -200% 0, 0 0;
+  }
+
+  100% {
+    background-position: 200% 0, 0 0;
+  }
+}
