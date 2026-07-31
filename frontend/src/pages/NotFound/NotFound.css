@@ -1,0 +1,52 @@
+.notfound-container{
+    min-height:100vh;
+    background:#F8F7FF;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.error-code{
+    font-size:120px;
+    font-weight:800;
+    color:#6C4DFF;
+    margin-bottom:10px;
+    line-height:1;
+}
+
+.notfound-container h2{
+    font-size:36px;
+    color:#1F2937;
+    margin-bottom:16px;
+}
+
+.notfound-container p{
+    max-width:500px;
+    font-size:18px;
+    color:#6B7280;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.home-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:220px;
+    height:58px;
+    font-size:17px;
+    border-radius:14px;
+    background:#6C4DFF;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#4F2DCC;
+    transform:translateY(-3px);
+}
