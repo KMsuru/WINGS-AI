@@ -58,10 +58,6 @@ WINGS-AI/
 ```
 
 
-## Current Status
-
-**Phase 0 Completed**
-
 Next Phase:
 ** Phase 1 – Project Setup & Authentication**
 
@@ -70,4 +66,4 @@ Next Phase:
 
 **Shruti Kolmadrekar**
 
-Computer Engineering Major Project
+Computer Engineering
