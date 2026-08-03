@@ -6,6 +6,9 @@
 
 WINGS AI is an AI-powered web application designed to help students and job seekers throughout their academic and professional journey. It combines conversational AI, voice interaction, productivity tools, and career guidance into a single intelligent platform.
 
+## Project Vision
+
+WINGS AI aims to provide students with a unified platform that combines AI tutoring, productivity tools, career guidance, and voice interaction into a single intelligent assistant.
 
 ## Features
 
@@ -35,7 +38,7 @@ WINGS AI is an AI-powered web application designed to help students and job seek
 - MySQL
 
 ### AI
-- OpenAI API (or another compatible LLM provider)
+- OpenAI API
 
 ### Voice
 - Whisper (Speech-to-Text)
@@ -57,9 +60,17 @@ WINGS-AI/
 └── .gitignore
 ```
 
+## Planned Modules
 
-Next Phase:
-** Phase 1 – Project Setup & Authentication**
+- Authentication
+- AI Chat
+- Voice Assistant
+- Notes Management
+- Study Planner
+- Progress Tracking
+- Resume Builder
+- Career Guidance
+- Interview Preparation
 
 
 ##  Author
