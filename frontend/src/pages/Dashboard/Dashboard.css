@@ -1,0 +1,55 @@
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #f7f8ff;
+}
+
+.dashboard-main{
+    flex:1;
+    padding:16px 28px;
+    overflow-y:auto;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    row-gap:15px;
+    column-gap:14px;
+}
+
+.card{
+    grid-column:span 4;
+    height:240px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+
+.small-card{
+    grid-column:span 3;
+    height:150px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+
+
+@media (max-width:1200px){
+
+.card{
+grid-column:span 12;
+}
+
+.small-card{
+grid-column:span 6;
+}
+
+}
+
+@media (max-width:768px){
+
+.small-card{
+grid-column:span 12;
+}
+
+}

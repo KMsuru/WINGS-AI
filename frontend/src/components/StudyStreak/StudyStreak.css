@@ -1,0 +1,80 @@
+.streak{
+    height:100%;
+    padding:18px 20px;
+    display:flex;
+    flex-direction:column;
+}
+
+.streak-header{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:14px;
+}
+
+.fire-icon{
+    width:25px;
+    height:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    color:#FF8A00;
+    background:#FFF3E8;
+    border-radius:10px;
+}
+
+.streak-header h3{
+    font-size:18px;
+    font-weight:700;
+    color:#1F2937;
+}
+
+.streak-count{
+    display:flex;
+    align-items:flex-end;
+    gap:8px;
+}
+
+.streak-number{
+    font-size:54px;
+    font-weight:700;
+    line-height:1;
+    color:#111827;
+}
+
+.streak-days{
+    font-size:18px;
+    color:#6B7280;
+    margin-bottom:6px;
+}
+
+.streak-message{
+    margin-top:10px;
+    font-size:14px;
+    color:#6B7280;
+}
+
+.week-row{
+    margin-top:auto;
+    display:flex;
+    gap:8px;
+}
+
+.day-circle{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ECECF5;
+    color:#6B7280;
+    font-size:12px;
+    font-weight:600;
+}
+
+.day-circle.active{
+    background:#6C4DFF;
+    color:#fff;
+}
