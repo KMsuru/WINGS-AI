@@ -1,0 +1,92 @@
+.tags-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    min-height:0;
+    margin-top:0;
+    background:#ffffff;
+    border:1px solid #efecff;
+    border-radius:16px;
+    padding:14px;
+    box-shadow:0 4px 12px rgba(108,77,255,.03);
+}
+
+.tags-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+}
+
+.tags-header h3{
+    margin:0;
+    font-size:15px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+.tags-add-btn{
+    width:28px;
+    height:28px;
+    border:none;
+    background:transparent;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    color:#6C4DFF;
+}
+
+.tags-add-btn:hover{
+    background:#f5f3ff;
+}
+
+.tags-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding-right:4px;
+}
+
+.tag-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.tag-left{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#4b5563;
+    font-size:13px;
+}
+
+.tag-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+
+.tag-count{
+    font-size:13px;
+    color:#9ca3af;
+}
+
+.tags-list::-webkit-scrollbar{
+    width:4px;
+}
+
+.tags-list::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.tags-list::-webkit-scrollbar-thumb{
+    background:#d9d3ff;
+    border-radius:20px;
+}
+
+.tags-list::-webkit-scrollbar-thumb:hover{
+    background:#bdb2ff;
+}

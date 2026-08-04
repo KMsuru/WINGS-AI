@@ -1,0 +1,59 @@
+.notes-page{
+    display:flex;
+    height:100vh;
+    background:#f5f3ff;
+    overflow:hidden;
+}
+
+.notes-main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    overflow:hidden;
+    padding:20px;
+}
+
+.notes-content{
+    display:grid;
+    grid-template-columns:260px 1fr 360px;
+    gap:20px;
+    flex:1;
+    min-height:0;
+    overflow:hidden;
+}
+
+
+.notes-center,
+.notes-right{
+    min-height:0;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.notes-left{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    gap:20px;
+    min-height:0;
+}
+
+.notes-left::-webkit-scrollbar,
+.notes-center::-webkit-scrollbar,
+.notes-right::-webkit-scrollbar{
+    width:6px;
+}
+
+.notes-left::-webkit-scrollbar-thumb,
+.notes-center::-webkit-scrollbar-thumb,
+.notes-right::-webkit-scrollbar-thumb{
+    background:#eae7fd;
+    border-radius:10px;
+}
+
+.notes-left::-webkit-scrollbar-track,
+.notes-center::-webkit-scrollbar-track,
+.notes-right::-webkit-scrollbar-track{
+    background:transparent;
+}

@@ -1,0 +1,23 @@
+.scrollable{
+    flex:1;
+    min-height:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.scrollable::-webkit-scrollbar{
+    width:4px;
+}
+
+.scrollable::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb{
+    background:#d9d3ff;
+    border-radius:20px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover{
+    background:#bdb2ff;
+}
