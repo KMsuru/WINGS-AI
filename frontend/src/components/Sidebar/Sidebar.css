@@ -7,7 +7,7 @@
 
     display:flex;
     flex-direction:column;
-
+    overflow-y:auto;
     padding:18px 20px;
     box-sizing:border-box;
 }
@@ -170,4 +170,88 @@
     flex-shrink:0;
 
     margin-top:-3px;
+}
+
+.study-card{
+    background:linear-gradient(135deg,#5E3DF5,#34239B);
+    border-radius:18px;
+    padding:12px;
+    margin:10px 0;
+    margin-bottom:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.study-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.study-count{
+    display:flex;
+    align-items:flex-end;
+    gap:6px;
+    margin-bottom:8px;
+}
+
+.study-count h2{
+    font-size:36px;
+    font-weight:700;
+    line-height:1;
+    margin:0;
+}
+
+
+.study-count span{
+    font-size:14px;
+    margin-bottom:4px;
+    color:#F3F0FF;
+}
+
+
+.study-card p{
+    font-size:12px;
+    color:#D9D9FF;
+    margin-bottom:12px;
+}
+
+
+.study-week{
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.study-day{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+}
+
+
+.study-day small{
+    font-size:10px;
+    color:#D9D9FF;
+}
+
+
+.study-circle{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+    color:#FFFFFF;
+}
+
+
+.study-circle.active{
+    background:#6C4DFF;
 }

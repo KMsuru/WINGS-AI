@@ -221,3 +221,20 @@
 }
 
 }
+
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+
+.hero-dashboard{
+  width:125%;
+  max-width:1050px;
+  margin-left:-70px;
+  border-radius:24px;
+  filter:drop-shadow(0 20px 40px rgba(108,77,255,.12));
+  transition:.3s;
+}

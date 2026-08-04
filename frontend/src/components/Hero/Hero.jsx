@@ -1,4 +1,5 @@
 import "./Hero.css";
+import dashboard from "../../assets/dashboard.png";
 
 function Hero() {
   return (
@@ -34,8 +35,9 @@ function Hero() {
       </div>
 
     <div className="hero-right">
-
-  </div> 
+      <img src={dashboard} alt="WINGS AI Dashboard" className="hero-dashboard"/>
+    </div> 
+    
     </section>
   );
 }

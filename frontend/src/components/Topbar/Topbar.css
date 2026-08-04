@@ -104,3 +104,9 @@
 
     border:2px solid #F8FAFC;
 }
+
+.chat-topbar{
+    justify-content:flex-end;
+    padding-bottom:0;
+    margin-bottom:0;
+}

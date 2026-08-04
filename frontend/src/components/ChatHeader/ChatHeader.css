@@ -1,0 +1,30 @@
+.chat-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 24px;
+    border-bottom:1px solid #ECECF4;
+}
+
+.chat-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.chat-title svg{
+    color:#6C4DFF;
+}
+
+.chat-title h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    color:#1F2937;
+}
+
+.chat-title p{
+    margin-top:6px;
+    font-size:15px;
+    color:#6B7280;
+}

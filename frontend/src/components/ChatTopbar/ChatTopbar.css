@@ -1,0 +1,29 @@
+@import "../Topbar/Topbar.css";
+
+.chat-topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:10px;
+}
+
+.chat-topbar-left h2{
+    margin:0 0 2px;
+    font-size:22px;
+    font-weight:700;
+    color:#1F2937;
+    line-height:1.15;
+}
+
+.chat-topbar-left p{
+    margin:0;
+    font-size:15px;
+    color:#6B7280;
+    line-height:1.25;
+}
+
+.chat-topbar-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}

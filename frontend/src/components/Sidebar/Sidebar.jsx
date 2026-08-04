@@ -71,6 +71,58 @@ function Sidebar() {
       {/* Bottom Section */}
 
       <div className="sidebar-bottom">
+        {/* Study Streak */}
+        <div className="study-card">
+            <div className="study-header">
+                <span>🔥 Study Streak</span>
+                <span>🎁</span>
+            </div>
+
+            <div className="study-count">
+                <h2>27</h2>
+                <span>Days</span>
+            </div>
+
+            <p>Keep going! You're doing great.</p>
+
+            <div className="study-week">
+                <div className="study-day">
+                    <small>M</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>T</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>W</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>T</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>F</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>S</small>
+                    <div className="study-circle active">✓</div>
+                </div>
+
+                <div className="study-day">
+                    <small>S</small>
+                    <div className="study-circle">✓</div>
+                </div>
+            </div>
+        </div>
+
         <div className="profile-card">
           <div className="profile-left">
             <div className="profile-avatar">

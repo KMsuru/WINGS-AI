@@ -6,10 +6,12 @@ import Register from "./pages/Auth/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Chat from "./pages/Chat/Chat";
 
 function App() {
   return (
     <Routes>
+      <Route path="/chat" element={<Chat />} />
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
