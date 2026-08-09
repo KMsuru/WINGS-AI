@@ -25,15 +25,23 @@ function Topbar({
     return (
         <header className={`topbar ${!showGreeting ? "chat-topbar" : ""}`}>
 
-            <div className="topbar-left">
-                <h2>
-                    {showGreeting ? `${greeting}, Guest` : title}
-                </h2>
+            {showGreeting || title ? (
+                <div className="topbar-left">
 
-                <p>
-                    {showGreeting ? "Let's make today productive." : subtitle}
-                </p>
-            </div>
+                    {showGreeting ? (
+                        <>
+                            <h2>{`${greeting}, Guest`}</h2>
+                            <p>Let's make today productive.</p>
+                        </>
+                    ) : (
+                        <>
+                            <h2>{title}</h2>
+                            <p>{subtitle}</p>
+                        </>
+                    )}
+
+                </div>
+            ) : null}
 
             <div className="topbar-right">
                 <div className="search-box">

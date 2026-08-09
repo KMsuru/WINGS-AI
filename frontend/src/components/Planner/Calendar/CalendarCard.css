@@ -1,0 +1,90 @@
+.calendar-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:16px;
+    box-shadow:0 8px 25px rgba(15,23,42,.06);
+    border:1px solid #eef1f6;
+    overflow:hidden;
+    max-width:340px;
+    height:320px;
+}
+
+.calendar-title{
+    margin-bottom:10px;
+}
+
+.calendar-title h3{
+    font-size:14px;
+    font-weight:700;
+    color:#111827;
+}
+
+.calendar-navigation{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.calendar-navigation h4{
+    font-size:15px;
+    font-weight:600;
+    color:#111827;
+}
+
+.calendar-arrow{
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:10px;
+    background:#f3f4f6;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.calendar-arrow:hover{
+    background:#6C4DFF;
+    color:#ffffff;
+}
+
+.calendar-weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    font-size:12px;
+    color:#6b7280;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.calendar-days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    grid-auto-rows:30px;
+    gap:3px;
+}
+
+.calendar-days span{
+    width:28px;
+    height:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.calendar-days span:hover{
+    background:#ede9fe;
+}
+
+.active-day{
+    background:#6C4DFF;
+    color:#ffffff;
+}
+
+.inactive-day{
+    color:#c4c4c4;
+}

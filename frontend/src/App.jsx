@@ -8,6 +8,7 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Chat from "./pages/Chat/Chat";
 import Notes from "./pages/Notes/Notes";
+import Planner from "./pages/Planner/Planner";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             </ProtectedRoute>
         }
       />
+      <Route path="/planner" element={<Planner/>}/>
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="*" element={<NotFound />}/>
     </Routes>
