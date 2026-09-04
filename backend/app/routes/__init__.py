@@ -1,7 +1,8 @@
 from flask import Blueprint, request
-from flask_jwt_extended import create_access_token, jwt_required
-from app.models import User
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from app.extensions import db
+from app.models import User
+
 
 main = Blueprint("main", __name__)
 
@@ -50,28 +51,41 @@ def login():
         return {
             "message": "Email and password are required"
         }, 400
+
     user = User.query.filter_by(email=data["email"]).first()
-    
+
     if not user:
         return {
             "message": "Invalid email or password"
         }, 401
-        
-    access_token = create_access_token(identity=str(user.id))
-        
+
     if not user.check_password(data["password"]):
         return {
             "message": "Invalid email or password"
         }, 401
-    
+
+    access_token = create_access_token(identity=str(user.id))
+
     return {
         "message": "Login successful",
         "access_token": access_token
-    }
+    }, 200
+    
+    
     
 @main.route("/api/profile", methods=["GET"])
 @jwt_required()
 def profile():
+    user_id = get_jwt_identity()
+    user = User.query.get(int(user_id))
+
+    if not user:
+        return {
+            "message": "User not found"
+        }, 404
+
     return {
-        "message": "Profile API working"
-    }
+        "id": user.id,
+        "name": user.name,
+        "email": user.email
+    }, 200

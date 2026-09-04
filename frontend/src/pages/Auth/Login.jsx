@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import mascot from "../../assets/mascot.png";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -13,6 +13,8 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,14 +34,43 @@ function Login() {
       toast.error("Password is required");
       return;
     }
+
+
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
+    fetch("http://127.0.0.1:5000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
+      .then(async (response) => {
+        const data = await response.json();
 
-      toast.success("Login Successful!");
+        if (!response.ok) {
+          throw new Error(data.message || "Login failed");
+        }
 
-    }, 2000);
+        return data;
+      })
+      .then((data) => {
+        localStorage.setItem("access_token", data.access_token);
+        toast.success(data.message);
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+
+
   };
   return (
     <div className="auth-page">
