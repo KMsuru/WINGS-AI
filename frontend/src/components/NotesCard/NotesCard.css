@@ -1,68 +1,126 @@
-.notes-card{
-    height:100%;
-    padding:18px;
-    border-radius:18px;
-    background:linear-gradient(135deg,#FFF9EC,#FFF2D8);
-    position:relative;
-    overflow:hidden;
-    transition:.3s;
-    cursor:pointer;
+.notes-card {
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+
+    background: linear-gradient(135deg, #FFF0D2, #FFE5B5);
+    border-radius: 18px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-.notes-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 28px rgba(245,158,11,.18);
+.notes-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.15);
 }
 
-.notes-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
+
+/* =========================
+   TITLE
+========================= */
+
+.notes-title {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 9px !important;
+    width: fit-content;
 }
 
-.notes-title svg{
-    color:#F59E0B;
-    font-size:18px;
+.notes-title svg {
+    color: #F59E0B;
+    font-size: 18px;
+    flex-shrink: 0;
 }
 
-.notes-title h3{
-    color:#C67C00;
-    font-size:18px;
-    font-weight:700;
+.notes-title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #C77900;
+    white-space: nowrap;
 }
 
-.notes-count{
-    margin-top:20px;
-    font-size:15px;
-    color:#6B7280;
+/* =========================
+   NOTES COUNT
+========================= */
+
+.notes-text {
+    margin: 9px 0 0;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #6B7280;
+
+    width: 65%;
 }
 
-.notes-btn{
-    margin-top:16px;
-    width:120px;
-    height:40px;
-    border:none;
-    border-radius:10px;
-    background:white;
-    color:#D97706;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+
+/* =========================
+   VIEW NOTES BUTTON
+========================= */
+
+.notes-btn {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #F59E0B;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+    color: #D97706;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
-.notes-btn:hover{
-    background:#F59E0B;
-    color:white;
+.notes-btn:hover {
+    background: #F59E0B;
+    color: white;
 }
 
-.notes-image{
-    position:absolute;
-    right:10px;
-    bottom:8px;
+.notes-btn span {
+    font-size: 16px;
+    line-height: 1;
 }
 
-.notes-image img{
-    width:125px;
-    height:auto;
-    display:block;
+.notes-btn:hover {
+    background: #D97706;
+}
+
+
+/* =========================
+   NOTES ILLUSTRATION
+========================= */
+
+.notes-illustration {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.notes-illustration img {
+    width:115px;
+    height: auto;
+    display: block;
 }

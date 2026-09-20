@@ -1,0 +1,73 @@
+.learning-card {
+    position: relative;
+    min-height: 150px;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #e7e7ef;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(31, 41, 55, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 41, 55, 0.08);
+}
+
+.learning-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height:38px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: #f3f0ff;
+    color: #6c4dff;
+}
+
+.learning-card h3 {
+    margin: 0 0 5px;
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.learning-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+.learning-card-arrow {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    color: #6c4dff;
+}
+
+.learning-card.purple {
+    background: #f7f2ff;
+}
+
+.learning-card.blue {
+    background: #f2f7ff;
+}
+
+.learning-card.green {
+    background: #f1fbf6;
+}
+
+.learning-card.orange {
+    background: #fff8ef;
+}
+
+.learning-card.pink {
+    background: #fff3f7;
+}
+
+.learning-card.lavender {
+    background: #f5f3ff;
+}

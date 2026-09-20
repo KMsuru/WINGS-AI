@@ -10,19 +10,22 @@ export default function VoiceAssistant() {
                 <h3>Voice Assistant</h3>
             </div>
 
-            <p className="voice-text">Tap to speak</p>
+            <p className="voice-text">
+                Tap to speak
+            </p>
 
-            <button className="voice-btn">
-                Start Voice chat
+            <button className="voice-action-button">
+                Start Voice chat →
             </button>
 
             <div className="voice-wave">
                 {[
-                    4,6,10,15,22,30,38,30,22,15,10,6,4
-                ].map((height,index)=>(
+                    4, 7, 10, 15, 22, 29, 36,
+                    31, 25, 19, 14, 9, 5
+                ].map((height, index) => (
                     <span
                         key={index}
-                        style={{height:`${height}px`}}
+                        style={{ height: `${height}px` }}
                     ></span>
                 ))}
             </div>

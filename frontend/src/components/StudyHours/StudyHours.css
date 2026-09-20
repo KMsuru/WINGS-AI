@@ -1,0 +1,91 @@
+.study-hours {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid rgba(108, 77, 255, 0.08);
+    box-shadow: 0 6px 20px rgba(31, 41, 55, 0.05);
+    box-sizing: border-box;
+}
+
+.study-hours-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.study-hours-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.study-hours-header p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.study-hours-filter {
+    padding: 6px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 11px;
+    outline: none;
+}
+
+.study-hours-chart {
+    display: flex;
+    height: 165px;
+}
+
+.study-hours-y-axis {
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.study-hours-y-axis span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.study-hours-bars {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 18px;
+    padding: 0 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.study-day {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.study-bar {
+    width: 18px;
+    max-height: 130px;
+    min-height: 10px;
+    border-radius: 6px 6px 3px 3px;
+    background: #6c4dff;
+}
+
+.study-day span {
+    font-size: 11px;
+    color: #6b7280;
+}

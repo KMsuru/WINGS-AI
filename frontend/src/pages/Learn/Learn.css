@@ -1,0 +1,39 @@
+.learn {
+    display: flex;
+    min-height: 100vh;
+    background: #f7f8ff;
+}
+
+.learn-main {
+    flex: 1;
+    padding: 16px 16px;
+    overflow-y: auto;
+}
+.learn-content {
+    padding-top: 20px;
+}
+
+.learn-content h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.learn-content p {
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.learning-tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 0px;
+}
+
+.learn-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}

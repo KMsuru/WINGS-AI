@@ -6,11 +6,9 @@ export default function ContinueChat() {
     return (
         <div className="chat-card">
 
-            <div className="chat-header">
-                <div className="chat-title">
-                    <BsChatDotsFill />
-                    <h3>Continue Chat</h3>
-                </div>
+            <div className="chat-title">
+                <BsChatDotsFill />
+                <h3>Continue Chat</h3>
             </div>
 
             <p className="chat-text">
@@ -18,7 +16,7 @@ export default function ContinueChat() {
             </p>
 
             <button className="chat-btn">
-                Open Chat →
+                Open Chat <span>→</span>
             </button>
 
             <div className="chat-robot">

@@ -11,8 +11,11 @@ import {
     ChevronDown,
 } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { Link, useLocation } from "react-router-dom";
+
 
 function Sidebar() {
+  const location = useLocation();
   return (
     <aside className="sidebar">
 
@@ -32,41 +35,41 @@ function Sidebar() {
       {/* Menu */}
 
       <nav className="sidebar-menu">
-        <button className="menu-item active">
-          <House size={20} />
-          <span>Home</span>
-        </button>
+        <Link to="/dashboard" className={`menu-item ${location.pathname === "/" ? "active" : ""}`}>
+            <House size={20} />
+            <span>Home</span>
+        </Link>
 
-        <button className="menu-item">
-          <Mic size={20} />
-          <span>Talk to WINGS</span>
-        </button>
+        <Link to="/chat" className={`menu-item ${location.pathname === "/chat" ? "active" : ""}`}>
+            <Mic size={20} />
+            <span>Talk to WINGS</span>
+        </Link>
 
-        <button className="menu-item">
-          <BookOpen size={20} />
-          <span>Learn</span>
-        </button>
+        <Link to="/learn" className={`menu-item ${location.pathname === "/learn" ? "active" : ""}`}>
+            <BookOpen size={20} />
+            <span>Learn</span>
+        </Link>
 
-        <button className="menu-item">
-          <NotebookPen size={20} />
-          <span>Notes</span>
-        </button>
+        <Link to="/notes" className={`menu-item ${location.pathname === "/notes" ? "active" : ""}`}>
+            <NotebookPen size={20} />
+            <span>Notes</span>
+        </Link>
 
-        <button className="menu-item">
-          <CalendarDays size={20} />
-          <span>Planner</span>
-        </button>
+        <Link to="/planner" className={`menu-item ${location.pathname === "/planner" ? "active" : ""}`}>
+            <CalendarDays size={20} />
+            <span>Planner</span>
+        </Link>
 
-        <button className="menu-item">
-          <ChartColumn size={20} />
-          <span>Progress</span>
-        </button>
+        <Link to="/progress" className={`menu-item ${location.pathname === "/progress" ? "active" : ""}`}>
+            <ChartColumn size={20} />
+            <span>Progress</span>
+        </Link>
 
-        <button className="menu-item">
-          <Settings size={20} />
-          <span>Settings</span>
-        </button>
-      </nav>
+        <Link to="/settings" className={`menu-item ${location.pathname === "/settings" ? "active" : ""}`}>
+            <Settings size={20} />
+            <span>Settings</span>
+        </Link>
+    </nav>
 
       {/* Bottom Section */}
 

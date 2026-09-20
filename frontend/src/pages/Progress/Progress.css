@@ -1,0 +1,37 @@
+.progress-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background: #f7f8ff;
+}
+
+.progress-main {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px 28px;
+}
+
+.progress-content {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.progress-content h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.progress-content p {
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.progress-main .topbar {
+    padding-left: 4px;
+}
+

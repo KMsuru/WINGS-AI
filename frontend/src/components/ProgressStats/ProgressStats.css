@@ -1,0 +1,134 @@
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.progress-stat-card {
+    border-radius: 18px;
+    padding: 18px 20px;
+    height: 135px;
+
+    border: 1px solid rgba(108, 77, 255, 0.08);
+
+    box-shadow: 0 6px 20px rgba(31, 41, 55, 0.05);
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+.progress-stat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.progress-stat-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eeeaff;
+    color: #5b3df5;
+
+    flex-shrink: 0;
+}
+
+.progress-stat-card:nth-child(1) {
+    background: #f3efff;
+}
+
+.progress-stat-card:nth-child(2) {
+    background: #eefaf3;
+}
+
+.progress-stat-card:nth-child(3) {
+    background: #eef6ff;
+}
+
+.progress-stat-card:nth-child(4) {
+    background: #fff5eb;
+}
+
+.progress-stat-card:nth-child(1) .progress-stat-icon {
+    background: #eeeaff;
+    color: #6c4dff;
+}
+
+.progress-stat-card:nth-child(2) .progress-stat-icon {
+    background: #e8f8ef;
+    color: #22a06b;
+}
+
+.progress-stat-card:nth-child(3) .progress-stat-icon {
+    background: #e8f3ff;
+    color: #3b82f6;
+}
+
+.progress-stat-card:nth-child(4) .progress-stat-icon {
+    background: #fff1e6;
+    color: #f59e0b;
+}
+
+.progress-stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.progress-stat-value {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+.progress-stat-unit {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.progress-stat-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.progress-stat-change {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.progress-stat-card:nth-child(1) .progress-stat-change {
+    color: #6c4dff;
+}
+
+.progress-stat-card:nth-child(2) .progress-stat-change {
+    color: #22a06b;
+}
+
+.progress-stat-card:nth-child(3) .progress-stat-change {
+    color: #3b82f6;
+}
+
+.progress-stat-card:nth-child(4) .progress-stat-change {
+    color: #f59e0b;
+}

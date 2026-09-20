@@ -9,6 +9,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Chat from "./pages/Chat/Chat";
 import Notes from "./pages/Notes/Notes";
 import Planner from "./pages/Planner/Planner";
+import Progress from "./pages/Progress/Progress";
+import Learn from "./pages/Learn/Learn";
 
 function App() {
   return (
@@ -24,9 +26,11 @@ function App() {
             </ProtectedRoute>
         }
       />
+      <Route path="/learn" element={<Learn />} />
       <Route path="/planner" element={<Planner/>}/>
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="*" element={<NotFound />}/>
+      <Route path="/progress" element={<Progress />} />
     </Routes>
   );
 }

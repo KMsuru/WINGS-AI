@@ -1,20 +1,32 @@
 .dashboard {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 0;
     background: #f7f8ff;
+    overflow: hidden;
 }
 
-.dashboard-main{
-    flex:1;
-    padding:16px 28px;
-    overflow-y:auto;
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    height: 100vh;
+    padding: 16px 28px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-.dashboard-cards{
-    display:grid;
-    grid-template-columns:repeat(12,1fr);
-    row-gap:15px;
-    column-gap:14px;
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 15px;
+    column-gap: 14px;
 }
 
 .card{
@@ -25,14 +37,51 @@
     box-shadow:0 8px 30px rgba(0,0,0,.05);
 }
 
-.small-card{
-    grid-column:span 3;
-    height:150px;
-    background:white;
-    border-radius:18px;
-    box-shadow:0 8px 30px rgba(0,0,0,.05);
+/* =========================================
+   BOTTOM FEATURE CARDS
+========================================= */
+
+.small-card {
+    grid-column: span 3;
+
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    align-self: stretch;
 }
 
+
+/* =========================================
+   SAME SIZE FOR ALL FOUR CARDS
+========================================= */
+
+.small-card > div {
+    width: 100% !important;
+
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 18px;
+}
 
 @media (max-width:1200px){
 
