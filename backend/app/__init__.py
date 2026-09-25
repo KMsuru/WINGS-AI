@@ -2,13 +2,21 @@ from flask import Flask
 from app.routes import main
 from app.extensions import db, bcrypt, jwt
 from flask_cors import CORS
+from dotenv import load_dotenv
+import os
 
 def create_app():
     app = Flask(__name__)
+    load_dotenv()
     CORS(app)
     
     app.config["JWT_SECRET_KEY"] = "wings-ai-secret-key"
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///wings_ai.db"
+    app.config["SQLALCHEMY_DATABASE_URI"] = (
+        f"mysql+pymysql://{os.getenv('DB_USER')}:"
+        f"{os.getenv('DB_PASSWORD')}@"
+        f"{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/"
+        f"{os.getenv('DB_NAME')}"
+    )
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)

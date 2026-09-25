@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import mascot from "../../assets/mascot.png";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -18,6 +18,8 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -61,10 +63,36 @@ function Register() {
 
     setLoading(true);
 
-    setTimeout(() => {
+    fetch("http://127.0.0.1:5000/api/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: fullName,
+            email: email,
+            password: password
+        })
+    })
+    .then(async (response) => {
+        const data = await response.json();
+
+        if (!response.ok) {
+        throw new Error(data.message || "Registration failed");
+        }
+
+        return data;
+    })
+    .then((data) => {
+        toast.success(data.message);
+        navigate("/login");
+    })
+    .catch((error) => {
+        toast.error(error.message);
+    })
+    .finally(() => {
         setLoading(false);
-        toast.success("Account Created Successfully!");
-    }, 2000);
+    });
     };
   const getPasswordStrength = (password) => {
     let score = 0;
