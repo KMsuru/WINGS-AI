@@ -1,7 +1,8 @@
 from flask import Blueprint, request
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from app.extensions import db
-from app.models import User
+from app.models import User, Chat, Message, Note
+from app.services.ai_service import get_ai_response
 
 
 main = Blueprint("main", __name__)
@@ -88,4 +89,52 @@ def profile():
         "id": user.id,
         "name": user.name,
         "email": user.email
+    }, 200
+
+@main.route("/api/chat", methods=["POST"])
+@jwt_required()
+def chat():
+    data = request.get_json()
+    user_id = get_jwt_identity()
+
+    if not data or not data.get("message"):
+        return {
+            "message": "Message is required"
+        }, 400
+
+    chat = Chat(
+        user_id=int(user_id),
+        title="New Chat"
+    )
+
+    db.session.add(chat)
+    db.session.commit()
+
+    user_message = Message(
+        chat_id=chat.id,
+        sender="user",
+        content=data["message"]
+    )
+
+    db.session.add(user_message)
+    db.session.commit()
+
+    ai_response = get_ai_response(data["message"])
+
+    if ai_response is None:
+        return {
+            "message": "AI service is temporarily unavailable. Please try again later."
+        }, 503
+
+    ai_message = Message(
+        chat_id=chat.id,
+        sender="ai",
+        content=ai_response
+    )
+
+    db.session.add(ai_message)
+    db.session.commit()
+
+    return {
+        "response": ai_response
     }, 200
