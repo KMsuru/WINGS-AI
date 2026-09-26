@@ -7,10 +7,15 @@ import os
 
 def create_app():
     app = Flask(__name__)
+    @app.errorhandler(500)
+    def internal_server_error(error):
+        return {
+            "message": "Internal server error"
+        }, 500
     load_dotenv()
     CORS(app)
     
-    app.config["JWT_SECRET_KEY"] = "wings-ai-secret-key"
+    app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
     app.config["SQLALCHEMY_DATABASE_URI"] = (
         f"mysql+pymysql://{os.getenv('DB_USER')}:"
         f"{os.getenv('DB_PASSWORD')}@"

@@ -9,16 +9,35 @@ import ContinueLearning from "../../components/ContinueLearning/ContinueLearning
 import ContinueChat from "../../components/ContinueChat/ContinueChat";
 import VoiceAssistant from "../../components/VoiceAssistant/VoiceAssistant";
 import NotesCard from "../../components/NotesCard/NotesCard";
-
+import { useEffect, useState } from "react";
 
 export default function Dashboard() {
+  const [userName, setUserName] = useState("Guest");
+
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+
+    if (!token) return;
+
+    fetch("http://127.0.0.1:5000/api/profile", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.name) {
+          setUserName(data.name);
+        }
+      });
+  }, []);
 
   return (
     <div className="dashboard">
-      <Sidebar />
+      <Sidebar userName={userName} />
 
       <main className="dashboard-main">
-        <Topbar />
+        <Topbar userName={userName} />
 
         <DashboardHero />
 

@@ -14,7 +14,7 @@ import logo from "../../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 
-function Sidebar() {
+function Sidebar({ userName = "Guest" }) {
   const location = useLocation();
   return (
     <aside className="sidebar">
@@ -129,11 +129,11 @@ function Sidebar() {
         <div className="profile-card">
           <div className="profile-left">
             <div className="profile-avatar">
-              G
+                {userName.charAt(0).toUpperCase()}
             </div>
 
             <div className="profile-info">
-              <h4>Guest</h4>
+              <h4>{userName}</h4>
               <p>Student</p>
             </div>
           </div>

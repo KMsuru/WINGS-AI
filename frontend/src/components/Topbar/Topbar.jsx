@@ -4,7 +4,8 @@ import { Search, Bell, Sun } from "lucide-react";
 function Topbar({
     showGreeting = true,
     title,
-    subtitle
+    subtitle,
+    userName = "Guest"
 }) {
     const currentHour = new Date().getHours();
 
@@ -30,7 +31,7 @@ function Topbar({
 
                     {showGreeting ? (
                         <>
-                            <h2>{`${greeting}, Guest`}</h2>
+                            <h2>{`${greeting}, ${userName}`}</h2>
                             <p>Let's make today productive.</p>
                         </>
                     ) : (
